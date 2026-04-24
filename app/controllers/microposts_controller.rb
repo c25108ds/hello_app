@@ -1,9 +1,5 @@
-class Micropost < ApplicationRecord
-  belongs_to :user
-  validates :content, length: { maximum: 140 }, presence: true # 追記
+class MicropostsController < ApplicationController
   before_action :set_micropost, only: %i[ show edit update destroy ]
-end
-
 
   # GET /microposts or /microposts.json
   def index
